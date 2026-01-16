@@ -1,5 +1,226 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+:root {
+  --bg-img: url("../images/cover-image-dark.png");
+  --bg-color: #000028;
+  --title-color: #DB00FF;
+  --accent-color: #FF0070;
+  --font-size: 18px;
+  --desc-color: #F1B2CE;
+  --first-sect-space: 30px;
+  --sect-space: 50px;
+}
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-img);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+  font-family: "IBM Plex mono", sans-serif;
+}
+
+/* единые стили -------------------------*/
+
+.frame_title {
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 83%;
+  letter-spacing: 0;
+}
+
+.topic_decor {
+  color: var(--accent-color);
+  font-size: var(--font-size);
+}
+
+.card_decor {
+  margin-top: 20px;
+}
+
+.title_decor {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  line-height: 23.4px;
+  font-size: var(--font-size);
+  margin-bottom: 10px;
+}
+
+.desc_decor {
+  color: var(--desc-color);
+  line-height: 23.4px;
+  font-size: var(--font-size);
+
+}
+
+.link_decor {
+  text-decoration: none;
+  text-shadow: 3px 1px 0 var(--accent-color);
+}
+
+.light_title {
+  font-weight: 400;
+}
+
+.corner {
+  width: 25px;
+  height: 25px;
+  border-width: 1px;
+  border-color: var(--accent-color);
+  display: block;
+  position: absolute;
+}
+
+/* стили для header -------------------------*/
+
+.header {
+  height: 668px;
+  position: relative;
+  padding: 10px;
+}
+
+.header_lamp_text {
+  color: var(--accent-color);
+  font-size: 18px;
+  display: flex;
+  justify-self: end;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.header_lamp_text::after {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: block;
+  content: "";
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  margin-left: 9px;
+  margin-right: -2px;
+  margin-top: 2px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 62px;
+}
+
+.header__theme-menu-item {
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  width: 70px;
+  height: 26px;
+  font-size: var(--font-size);
+}
+
+.header__theme-menu-button_active {
+  border: var(--accent-color) 1px solid;
+}
+
+.header_title {
+  margin-top: 70px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header_desc {
+  margin-top: 52px;
+}
+
+.header_corner_top {
+  border-style: solid solid none none; 
+  right: 10px;
+  top: 10px;
+}
+
+.header_corner_bottom {
+  border-style: none none solid solid;
+  left: 10px;
+  bottom: 10px;
+}
+
+
+/* стили для main -------------------------*/
+
+.main {
+  background-color: var(--bg-color);
+  padding: 10px;
+  padding-bottom: 37px;
+}
+
+
+/* стили для problem -------------------------*/
+
+.problem {
+  margin-top: var(--first-sect-space);
+}
+
+/* стили для factors -------------------------*/
+
+.factors {
+  margin-top: var(--sect-space);
+}
+
+
+/* стили для tips -------------------------*/
+
+.tips {
+  margin-top: var(--sect-space);
+}
+
+.tips_title:first-of-type {
+  margin-top: 20px;
+}
+
+
+/* стили для gallery -------------------------*/
+
+.gallery {
+  margin-top: var(--sect-space);
+}
+
+.gallery_img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.gallery_img:first-of-type {
+  margin-top: 0;
+}
+
+/* стили для footer -------------------------*/
+
+.footer {
+  height: 668px;
+  padding: 10px;
+  background-color: var(--bg-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_corner_top {
+  border-style: solid solid none none; 
+  right: 10px;
+  top: 10px;
+}
+
+.footer_corner_bottom {
+  border-style: none none solid solid;
+  left: 10px;
+  bottom: 10px;
 }
