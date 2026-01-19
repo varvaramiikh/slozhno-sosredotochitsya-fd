@@ -10,6 +10,7 @@
   --first-sect-space: 30px;
   --sect-space: 50px;
   --layout-padding: 10px;
+  --accent-color-hover: rgba(255, 0, 112, 0.4);
 }
 
 .page {
@@ -54,6 +55,16 @@
 .link_decor {
   text-decoration: none;
   text-shadow: 3px 1px 0 var(--accent-color);
+  position: relative;
+}
+
+.link_decor:hover {
+  border-bottom: 2px solid var(--desc-color);
+}
+
+.link_decor:focus {
+  outline: none;
+  border: 1px solid var(--desc-color);
 }
 
 .light_title {
@@ -125,6 +136,19 @@
   width: 70px;
   height: 26px;
   font-size: var(--font-size);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__theme-menu-button:hover {
+  border: var(--accent-color-hover) 1px solid;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-bottom: var(--accent-color) 1px solid;
 }
 
 .header__theme-menu-button_active {
@@ -205,7 +229,6 @@
 
 .footer {
   height: 668px;
-  /* padding: var(--layout-padding); */
   padding-bottom: 20px;
   background-color: var(--bg-color);
   position: relative;
@@ -241,11 +264,21 @@
     --layout-padding: 20px;
   }
 
+
+  /* единые стили -------------------------*/
+
+  .frame_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  }
+
+
   /* стили для header -------------------------*/
+  
   .header {
     height: 1024px;
     padding-left: 0;
   }
+
 
   .header__theme-menu-list {
     margin-top: 170px;
@@ -278,7 +311,6 @@
     display: grid;
     grid-template-columns: 0.7fr 1.4fr;
     gap: 20px;
-    /* padding: ; */
   }
 
   .problem_topic {
@@ -384,4 +416,74 @@
   .footer_corner_bottom {
     bottom: 20px;
   }       
+}
+
+
+
+
+
+
+
+/* laptop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media (width >= 1024px) {
+
+  /* стили для header -------------------------*/
+
+  .header {
+    height: 768px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    margin-right: -20px;
+  }
+
+  .header_title {
+    margin-top: 275px;
+  }
+
+  .header_desc {
+    margin-top: 110px;
+    width: 49%;
+  }
+
+
+  /* стили для problem -------------------------*/
+
+  .problem {
+    gap: 10px;
+  }
+
+
+  /* стили для factors -------------------------*/
+
+  .factors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .factors_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+
+  /* стили для tips -------------------------*/
+
+  .tips {
+    gap: 10px;
+  }
+
+
+  /* стили для footer -------------------------*/
+
+  .footer {
+    height: 768px;
+  }
+
+
 }
