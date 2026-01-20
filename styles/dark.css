@@ -11,4 +11,12 @@
   */
 
   --bg-img: url("../images/cover-image-dark.png");
+  --bg-color: #000028;
+  --accent-text-color: #000028;
+  --title-color: #DB00FF;
+  --topic-color: #FF0070;
+  --button-color: #ff0070;
+  --accent-color: #FF0070;
+  --desc-color: #F1B2CE;
+  --accent-color-hover: rgba(255, 0, 112, 0.4);
 }

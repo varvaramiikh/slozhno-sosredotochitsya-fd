@@ -10,5 +10,13 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-  
+  --bg-img: url("../images/cover-image-light.png");
+  --bg-color: #FFF1F7;
+  --accent-text-color: #353430;
+  --button-color: #353430;
+  --title-color: #FFC2E6;
+  --topic-color: #353430;
+  --accent-color: #FF8DCB;
+  --desc-color: #353430;
+  --accent-color-hover: rgba(50, 49, 45, 0.4);
 }

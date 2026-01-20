@@ -1,18 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-:root {
-  --bg-img: url("../images/cover-image-dark.png");
-  --bg-color: #000028;
-  --title-color: #DB00FF;
-  --accent-color: #FF0070;
-  --font-size: 18px;
-  --desc-color: #F1B2CE;
-  --first-sect-space: 30px;
-  --sect-space: 50px;
-  --layout-padding: 10px;
-  --accent-color-hover: rgba(255, 0, 112, 0.4);
-}
-
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-color: var(--bg-color);
@@ -27,10 +14,11 @@
   font-weight: 700;
   line-height: 83%;
   letter-spacing: 0;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .topic_decor {
-  color: var(--accent-color);
+  color: var(--topic-color);
   font-size: var(--font-size);
 }
 
@@ -39,7 +27,7 @@
 }
 
 .title_decor {
-  color: var(--bg-color);
+  color: var(--accent-text-color);
   background-color: var(--accent-color);
   line-height: 23.4px;
   font-size: var(--font-size);
@@ -75,7 +63,7 @@
   width: 25px;
   height: 25px;
   border-width: 1px;
-  border-color: var(--accent-color);
+  border-color: var(--button-color);
   display: block;
   position: absolute;
 }
@@ -116,6 +104,10 @@
   margin-top: 2px;
 }
 
+:root.theme-light .header_lamp_text {
+  display: none;
+}
+
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
@@ -129,7 +121,7 @@
 }
 
 .header__theme-menu-button {
-  color: var(--accent-color);
+  color: var(--button-color);
   background-color: transparent;
   border: none;
   text-transform: lowercase;
@@ -148,16 +140,15 @@
 
 .header__theme-menu-button:focus {
   outline: none;
-  border-bottom: var(--accent-color) 1px solid;
+  border-bottom: var(--button-color) 1px solid;
 }
 
 .header__theme-menu-button_active {
-  border: var(--accent-color) 1px solid;
+  border: var(--button-color) 1px solid;
 }
 
 .header_title {
   margin-top: 70px;
-  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header_desc {
@@ -165,7 +156,7 @@
 }
 
 .header_corner_top {
-  border-style: solid solid none none; 
+  border-style: solid solid none none;
   right: var(--layout-padding);
   top: var(--layout-padding);
 }
@@ -176,14 +167,12 @@
   bottom: var(--layout-padding);
 }
 
-
 /* стили для main -------------------------*/
 
 .main {
   background-color: var(--bg-color);
   padding: var(--layout-padding);
 }
-
 
 /* стили для problem -------------------------*/
 
@@ -197,7 +186,6 @@
   margin-top: var(--sect-space);
 }
 
-
 /* стили для tips -------------------------*/
 
 .tips {
@@ -207,7 +195,6 @@
 .tips_title:first-of-type {
   margin-top: 20px;
 }
-
 
 /* стили для gallery -------------------------*/
 
@@ -224,7 +211,6 @@
   margin-top: 0;
 }
 
-
 /* стили для footer -------------------------*/
 
 .footer {
@@ -239,7 +225,7 @@
 }
 
 .footer_corner_top {
-  border-style: solid solid none none; 
+  border-style: solid solid none none;
   right: var(--layout-padding);
   top: 0;
 }
@@ -248,37 +234,23 @@
   border-style: none none solid solid;
   left: var(--layout-padding);
   bottom: 20px;
-}       
-
-
-
-
-
+}
 
 /* tablet !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media (width >= 765px) {
-  :root {
-    --first-sect-space: 40px;
-    --sect-space: 80px;
-    --layout-padding: 20px;
-  }
-
-
   /* единые стили -------------------------*/
 
   .frame_title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-
   /* стили для header -------------------------*/
-  
+
   .header {
     height: 1024px;
     padding-left: 0;
   }
-
 
   .header__theme-menu-list {
     margin-top: 170px;
@@ -287,7 +259,7 @@
   .header_lamp_text {
     right: 32px;
   }
-  
+
   .header_title {
     margin-top: 177px;
   }
@@ -304,7 +276,6 @@
     padding: 0 20px;
   }
 
-
   /* стили для problem -------------------------*/
 
   .problem {
@@ -316,7 +287,6 @@
   .problem_topic {
     margin-top: 20px;
   }
-
 
   /* стили для factors -------------------------*/
 
@@ -336,7 +306,6 @@
     grid-row: 2 / 3;
   }
 
-
   /* стили для tips -------------------------*/
 
   .tips {
@@ -349,7 +318,6 @@
     grid-column: 2 / 3;
     margin-top: -20px;
   }
-
 
   /* стили для gallery ------------------------- */
 
@@ -396,9 +364,8 @@
     grid-row: 3 / 4;
   }
 
-
   /* стили для footer ------------------------- */
-  
+
   .footer {
     height: 1024px;
     margin-top: 60px;
@@ -410,24 +377,17 @@
 
   .footer_corner_top {
     top: 20px;
-    border-style: solid solid none none; 
+    border-style: solid solid none none;
   }
 
   .footer_corner_bottom {
     bottom: 20px;
-  }       
+  }
 }
-
-
-
-
-
-
 
 /* laptop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media (width >= 1024px) {
-
   /* стили для header -------------------------*/
 
   .header {
@@ -450,13 +410,11 @@
     width: 49%;
   }
 
-
   /* стили для problem -------------------------*/
 
   .problem {
     gap: 10px;
   }
-
 
   /* стили для factors -------------------------*/
 
@@ -471,19 +429,15 @@
     gap: 20px;
   }
 
-
   /* стили для tips -------------------------*/
 
   .tips {
     gap: 10px;
   }
 
-
   /* стили для footer -------------------------*/
 
   .footer {
     height: 768px;
   }
-
-
 }
