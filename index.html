@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
-    <script src="./scripts/script.js"></script>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
-    <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
+    <script src="./scripts/script.js"></script>
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <span class="header_lamp_text">REC</span>
+      <span class="header_lamp_text" aria-hidden="true">REC</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -47,12 +47,12 @@
         </ul>
       </nav>
       <h1 class="header_title frame_title">no focus</h1>
-      <h3 class="header_desc title_decor">
+      <h2 class="header_desc title_decor">
         Что делать, когда не можешь делать ничего <br />
         Или почему нам так сложно сконцентрироваться, особенно когда очень надо
-      </h3>
-      <span class="corner header_corner_top"></span>
-      <span class="corner header_corner_bottom"></span>
+      </h2>
+      <span class="corner header_corner_top" aria-hidden="true"></span>
+      <span class="corner header_corner_bottom" aria-hidden="true"></span>
     </header>
     <main class="main">
       <section class="problem">
@@ -203,35 +203,35 @@
           <img
             class="gallery_img img_sunset"
             src="./images/sunset.png"
-            alt="sunset"
+            alt="закат"
           />
           <img
             class="gallery_img img_ice-cream"
             src="./images/ice-cream.png"
-            alt="ice-cream"
+            alt="мороженое"
           />
           <img
             class="gallery_img img_tape"
             src="./images/tape.png"
-            alt="tape"
+            alt="аудиокассета"
           />
           <img
             class="gallery_img img_books"
             src="./images/books.png"
-            alt="books"
+            alt="книги"
           />
           <img
             class="gallery_img img_street"
             src="./images/street.png"
-            alt="street"
+            alt="улица"
           />
         </div>
       </section>
     </main>
     <footer class="footer">
-      <h1 class="footer_title frame_title">focus</h1>
-      <span class="corner footer_corner_top"></span>
-      <span class="corner footer_corner_bottom"></span>
+      <p class="footer_title frame_title">focus</p>
+      <span class="corner footer_corner_top" aria-hidden="true"></span>
+      <span class="corner footer_corner_bottom" aria-hidden="true"></span>
     </footer>
   </body>
 </html>

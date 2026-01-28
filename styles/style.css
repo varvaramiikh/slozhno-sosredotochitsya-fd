@@ -4,6 +4,7 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-color: var(--bg-color);
   font-family: "IBM Plex mono", sans-serif;
+  background-attachment: fixed;
 }
 
 /* единые стили -------------------------*/
@@ -47,7 +48,7 @@
 }
 
 .link_decor:hover {
-  border-bottom: 2px solid var(--desc-color);
+  border-block-end: 2px solid var(--desc-color);
 }
 
 .link_decor:focus {
@@ -71,13 +72,13 @@
 /* стили для header -------------------------*/
 
 .header {
-  height: 668px;
+  min-height: var(--viewport-min-height);
+  height: 100vh;
   position: relative;
   padding: var(--layout-padding);
   background-image: var(--bg-img);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .header_lamp_text {
@@ -87,8 +88,8 @@
   justify-self: end;
   align-items: center;
   position: absolute;
-  right: 22px;
-  top: var(--layout-padding);
+  inset-inline-end: 22px;
+  inset-block-start: var(--layout-padding);
 }
 
 .header_lamp_text::after {
@@ -99,8 +100,8 @@
   display: block;
   content: "";
   box-shadow: 0 0 4px 2px var(--accent-color);
-  margin-left: 9px;
-  margin-right: -2px;
+  margin-inline-start: 9px;
+  margin-inline-end: -2px;
   margin-top: 2px;
 }
 
@@ -140,7 +141,7 @@
 
 .header__theme-menu-button:focus {
   outline: none;
-  border-bottom: var(--button-color) 1px solid;
+  border-block-end: var(--button-color) 1px solid;
 }
 
 .header__theme-menu-button_active {
@@ -157,14 +158,14 @@
 
 .header_corner_top {
   border-style: solid solid none none;
-  right: var(--layout-padding);
-  top: var(--layout-padding);
+  inset-inline-end: var(--layout-padding);
+  inset-block-start: var(--layout-padding);
 }
 
 .header_corner_bottom {
   border-style: none none solid solid;
-  left: var(--layout-padding);
-  bottom: var(--layout-padding);
+  inset-inline-start: var(--layout-padding);
+  inset-block-end: var(--layout-padding);
 }
 
 /* стили для main -------------------------*/
@@ -214,7 +215,8 @@
 /* стили для footer -------------------------*/
 
 .footer {
-  height: 668px;
+  min-height: var(--viewport-min-height);
+  height: 100vh;
   padding-bottom: 20px;
   background-color: var(--bg-color);
   position: relative;
@@ -226,14 +228,14 @@
 
 .footer_corner_top {
   border-style: solid solid none none;
-  right: var(--layout-padding);
-  top: 0;
+  inset-inline-end: var(--layout-padding);
+  inset-block-start: 0;
 }
 
 .footer_corner_bottom {
   border-style: none none solid solid;
-  left: var(--layout-padding);
-  bottom: 20px;
+  inset-inline-start: var(--layout-padding);
+  inset-block-end: 20px;
 }
 
 /* tablet !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -248,8 +250,7 @@
   /* стили для header -------------------------*/
 
   .header {
-    height: 1024px;
-    padding-left: 0;
+    padding-inline-start: 0;
   }
 
   .header__theme-menu-list {
@@ -257,7 +258,7 @@
   }
 
   .header_lamp_text {
-    right: 32px;
+    inset-inline-end: 32px;
   }
 
   .header_title {
@@ -367,7 +368,6 @@
   /* стили для footer ------------------------- */
 
   .footer {
-    height: 1024px;
     margin-top: 60px;
   }
 
@@ -376,12 +376,12 @@
   }
 
   .footer_corner_top {
-    top: 20px;
+    inset-block-start: 20px;
     border-style: solid solid none none;
   }
 
   .footer_corner_bottom {
-    bottom: 20px;
+    inset-block-end: 20px;
   }
 }
 
@@ -390,15 +390,11 @@
 @media (width >= 1024px) {
   /* стили для header -------------------------*/
 
-  .header {
-    height: 768px;
-  }
-
   .header__theme-menu-list {
     flex-direction: row;
     justify-content: center;
     margin-top: 0;
-    margin-right: -20px;
+    margin-inline-end: -20px;
   }
 
   .header_title {
@@ -433,11 +429,5 @@
 
   .tips {
     gap: 10px;
-  }
-
-  /* стили для footer -------------------------*/
-
-  .footer {
-    height: 768px;
   }
 }

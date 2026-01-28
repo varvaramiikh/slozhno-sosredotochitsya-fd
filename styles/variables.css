@@ -17,6 +17,7 @@
   --first-sect-space: 30px;
   --sect-space: 50px;
   --layout-padding: 10px;
+  --viewport-min-height: 668px;
 }
 
 /* tablet !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -26,6 +27,15 @@
     --first-sect-space: 40px;
     --sect-space: 80px;
     --layout-padding: 20px;
+    --viewport-min-height: 1024px;
+  }
+}
+
+/* laptop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media (width >= 1024px) {
+  :root {
+    --viewport-min-height: 768px;
   }
 }
 
