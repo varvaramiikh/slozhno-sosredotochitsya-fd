@@ -11,12 +11,12 @@
   */
 
   --bg-img: url("../images/cover-image-light.png");
-  --bg-color: #FFF1F7;
+  --bg-color: #fff1f7;
   --accent-text-color: #353430;
   --button-color: #353430;
-  --title-color: #FFC2E6;
+  --title-color: #ffc2e6;
   --topic-color: #353430;
-  --accent-color: #FF8DCB;
+  --accent-color: #ff8dcb;
   --desc-color: #353430;
   --accent-color-hover: rgba(50, 49, 45, 0.4);
 }
