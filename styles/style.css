@@ -5,6 +5,9 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-color: var(--bg-color);
   background-attachment: fixed;
+  background-image: var(--bg-img);
+  background-position: center;
+  background-size: cover;
 }
 
 /* единые стили -------------------------*/
@@ -76,9 +79,6 @@
   height: 100vh;
   min-height: var(--viewport-min-height);
   padding: var(--layout-padding);
-  background-image: var(--bg-img);
-  background-position: center;
-  background-size: cover;
 }
 
 .header_lamp_text {
@@ -107,6 +107,12 @@
 
 :root.theme-light .header_lamp_text {
   display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not(.theme-dark) .header_lamp_text {
+    display: none;
+  }
 }
 
 .header__theme-menu-list {
@@ -173,6 +179,7 @@
 .main {
   padding: var(--layout-padding);
   background-color: var(--bg-color);
+  padding-bottom: 47px;
 }
 
 /* стили для problem -------------------------*/
@@ -221,7 +228,6 @@
   align-items: center;
   height: 100vh;
   min-height: var(--viewport-min-height);
-  margin-top: 37px;
   padding-bottom: 20px;
   background-color: var(--bg-color);
 }
@@ -274,7 +280,7 @@
   /* стили для main -------------------------*/
 
   .main {
-    padding: 0 20px;
+    padding: 0 20px 60px;
   }
 
   /* стили для problem -------------------------*/
@@ -317,8 +323,12 @@
 
   .tips_list {
     grid-column: 2 / 3;
-    margin-top: -20px;
   }
+
+  .tips_title:first-of-type {
+    margin-top: 0;
+  }
+
 
   /* стили для gallery ------------------------- */
 
@@ -367,10 +377,6 @@
 
   /* стили для footer ------------------------- */
 
-  .footer {
-    margin-top: 60px;
-  }
-
   .footer_title {
     margin-top: 25px;
   }
@@ -390,11 +396,14 @@
 @media (width >= 1024px) {
   /* стили для header -------------------------*/
 
+  .header {
+    padding-inline: 0;
+  }
+
   .header__theme-menu-list {
     flex-direction: row;
     justify-content: center;
     margin-top: 0;
-    margin-inline-end: -20px;
   }
 
   .header_title {
@@ -402,8 +411,9 @@
   }
 
   .header_desc {
-    width: 49%;
     margin-top: 110px;
+    margin-inline-end: 20px;
+    width: calc(49% - 10px);
   }
 
   /* стили для problem -------------------------*/
