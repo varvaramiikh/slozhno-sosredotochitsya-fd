@@ -44,6 +44,10 @@
   line-height: 23.4px;
 }
 
+.desc_decor + .desc_decor {
+  margin-top: 10px;
+}
+
 .link_decor {
   position: relative;
   text-decoration: none;
@@ -178,7 +182,6 @@
 
 .main {
   padding: var(--layout-padding);
-  background-color: var(--bg-color);
   padding-bottom: 47px;
 }
 
@@ -229,7 +232,6 @@
   height: 100vh;
   min-height: var(--viewport-min-height);
   padding-bottom: 20px;
-  background-color: var(--bg-color);
 }
 
 .footer_corner_top {
